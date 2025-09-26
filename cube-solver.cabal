@@ -37,7 +37,7 @@ library
                       Triggers,
                       AlgExpr
 
-    build-depends:    base ^>=4.17.2.1,
+    build-depends:    base >= 4.17.2.1,
                       mtl,
                       text,
                       megaparsec,
@@ -58,7 +58,7 @@ library
 executable cube-solver
     main-is:          Main.hs
 
-    build-depends:    base ^>=4.17.2.1,
+    build-depends:    base >= 4.17.2.1,
                       cube-solver,
                       options
 
@@ -71,7 +71,7 @@ test-suite cube-solver-tests
     
     main-is:          CubeSolverTest.hs
     
-    build-depends:    base ^>=4.17.2.1, 
+    build-depends:    base  >= 4.17.2.1, 
                       Cabal >= 3.0,
                       cube-solver,
                       QuickCheck,
@@ -84,6 +84,6 @@ test-suite cube-solver-tests
     default-language: Haskell2010
 
 custom-setup
-    setup-depends:    base ^>=4.17.2.1, 
+    setup-depends:    base  >= 4.17.2.1, 
                       Cabal >= 3.0,
                       process
