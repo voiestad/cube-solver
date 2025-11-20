@@ -1,14 +1,14 @@
 {-# LANGUAGE QuasiQuotes #-}
-module CFOP.PLL (pll, pllSolved) where
+module CubeSolver.CFOP.PLL (pll, pllSolved) where
 
+import CubeSolver.CubeState
+import CubeSolver.Cube
+import CubeSolver.Triggers
+import CubeSolver.CFOP.Cross (crossSolved)
+import CubeSolver.CFOP.F2L (f2lSolved)
+import CubeSolver.CFOP.OLL (ollSolved)
+import CubeSolver.AlgExpr
 import Control.Monad.State
-import CubeState
-import Cube
-import Triggers
-import CFOP.Cross (crossSolved)
-import CFOP.F2L (f2lSolved)
-import CFOP.OLL (ollSolved)
-import AlgExpr
 
 data PLLCategory = EdgesOnly | AdjecentCornerSwap | DiagonalCornerSwap
     deriving (Eq, Show)

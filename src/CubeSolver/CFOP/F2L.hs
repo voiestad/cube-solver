@@ -1,11 +1,11 @@
-module CFOP.F2L (f2l, f2lSolved) where
+module CubeSolver.CFOP.F2L (f2l, f2lSolved) where
 
-import Cube
-import CubeState
+import CubeSolver.Cube
+import CubeSolver.CubeState
+import CubeSolver.CFOP.Cross
 import Control.Monad.State
 import Data.Maybe
 import Data.List (permutations)
-import CFOP.Cross
 
 f2l :: Cube Algorithm
 f2l = do

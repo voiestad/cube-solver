@@ -1,7 +1,7 @@
-module CFOP.Cross (cross, crossSolved) where
+module CubeSolver.CFOP.Cross (cross, crossSolved) where
 
-import Cube
-import CubeState
+import CubeSolver.Cube
+import CubeSolver.CubeState
 import Control.Monad.State
 import Data.List (permutations)
 

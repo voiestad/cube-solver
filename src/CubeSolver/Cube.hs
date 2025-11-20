@@ -1,8 +1,7 @@
 {-# Language DeriveDataTypeable #-}
-module Cube where
+module CubeSolver.Cube where
 
-import CubeState
-
+import CubeSolver.CubeState
 import Control.Monad.State
 import Data.List (minimumBy)
 import Data.Data

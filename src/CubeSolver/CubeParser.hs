@@ -1,12 +1,12 @@
-module CubeParser (parseScramble, parse, parseCubeState, parseMove) where
+module CubeSolver.CubeParser (parseScramble, parse, parseCubeState, parseMove) where
 
+import CubeSolver.CubeState
+import CubeSolver.Cube
+import CubeSolver.CubeValidator
 import Text.Megaparsec
 import Text.Megaparsec.Char
 import qualified Data.Text as T
 import Data.Void
-import CubeState
-import Cube
-import CubeValidator
 
 type Parser = Parsec Void T.Text
 

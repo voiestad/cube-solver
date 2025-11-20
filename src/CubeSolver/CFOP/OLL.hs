@@ -1,13 +1,13 @@
 {-# LANGUAGE QuasiQuotes #-}
-module CFOP.OLL (oll, ollSolved) where
+module CubeSolver.CFOP.OLL (oll, ollSolved) where
 
-import Cube
-import Triggers
-import CubeState
+import CubeSolver.Cube
+import CubeSolver.Triggers
+import CubeSolver.CubeState
+import CubeSolver.CFOP.Cross (crossSolved)
+import CubeSolver.CFOP.F2L (f2lSolved)
+import CubeSolver.AlgExpr
 import Control.Monad.State
-import CFOP.Cross (crossSolved)
-import CFOP.F2L (f2lSolved)
-import AlgExpr
 
 oll :: Cube Algorithm
 oll = do

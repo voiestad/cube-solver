@@ -14,28 +14,24 @@ license-file:       LICENSE
 
 author:             Vebjørn Øiestad
 
-build-type:         Custom
-
 common warnings
     ghc-options: -Wall
 
 library
     import:           warnings
 
-    exposed-modules:  PDFCube,
-                      CubeSolverServer,
-                      BluetoothCube,
-                      Cube,
-                      CubeState,
-                      CubeParser,
-                      CubeValidator,
-                      CFOP.CFOP,
-                      CFOP.PLL,
-                      CFOP.OLL,
-                      CFOP.F2L,
-                      CFOP.Cross,
-                      Triggers,
-                      AlgExpr
+    exposed-modules:  CubeSolver.PDFCube,
+                      CubeSolver.Cube,
+                      CubeSolver.CubeState,
+                      CubeSolver.CubeParser,
+                      CubeSolver.CubeValidator,
+                      CubeSolver.CFOP.CFOP,
+                      CubeSolver.CFOP.PLL,
+                      CubeSolver.CFOP.OLL,
+                      CubeSolver.CFOP.F2L,
+                      CubeSolver.CFOP.Cross,
+                      CubeSolver.Triggers,
+                      CubeSolver.AlgExpr
 
     build-depends:    base >= 4.17.2.1,
                       mtl,
@@ -43,24 +39,17 @@ library
                       megaparsec,
                       HPDF,
                       process,
-                      time,
-                      servant,
-                      servant-server,
-                      wai,
-                      warp,
-                      bytestring,
                       template-haskell
 
     hs-source-dirs:   src
 
     default-language: Haskell2010
 
-executable cube-solver
+executable cube-solver-runner
     main-is:          Main.hs
 
     build-depends:    base >= 4.17.2.1,
-                      cube-solver,
-                      options
+                      cube-solver
 
     hs-source-dirs:   app
 
@@ -82,8 +71,3 @@ test-suite cube-solver-tests
     hs-source-dirs:   test
 
     default-language: Haskell2010
-
-custom-setup
-    setup-depends:    base  >= 4.17.2.1, 
-                      Cabal >= 3.0,
-                      process

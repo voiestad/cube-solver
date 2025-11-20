@@ -1,8 +1,8 @@
-module AlgExpr where
+module CubeSolver.AlgExpr where
 
+import CubeSolver.CubeParser
 import qualified Language.Haskell.TH as TH
 import Language.Haskell.TH.Quote
-import CubeParser
 import Text.Megaparsec (runParser)
 import qualified Data.Text as T
 import Language.Haskell.TH.Syntax (liftData)
