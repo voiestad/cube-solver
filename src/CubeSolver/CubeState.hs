@@ -1,4 +1,4 @@
-module CubeState where
+module CubeSolver.CubeState where
 
 data CubeColor = 
       White

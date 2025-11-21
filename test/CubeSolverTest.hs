@@ -1,14 +1,15 @@
 module Main where
 
-import Cube
-import CubeState
-import CubeValidator
+import CubeSolver.Cube
+import CubeSolver.CubeState
+import CubeSolver.CubeValidator
+import CubeSolver.CubeParser (parseCubeState, parseScramble)
 
-import CFOP.Cross
-import CFOP.F2L
-import CFOP.OLL
-import CFOP.PLL 
-import CFOP.CFOP
+import CubeSolver.CFOP.Cross
+import CubeSolver.CFOP.F2L
+import CubeSolver.CFOP.OLL
+import CubeSolver.CFOP.PLL 
+import CubeSolver.CFOP.CFOP
 
 import Control.Monad.State
 import Text.Megaparsec
@@ -16,7 +17,6 @@ import qualified Data.Text as T
 
 import Test.QuickCheck
 import System.Exit (exitFailure)
-import CubeParser (parseCubeState, parseScramble)
 
 main :: IO ()
 main = do

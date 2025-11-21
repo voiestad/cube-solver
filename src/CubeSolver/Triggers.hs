@@ -1,8 +1,8 @@
 {-# LANGUAGE QuasiQuotes #-}
-module Triggers where
+module CubeSolver.Triggers where
 
-import Cube
-import AlgExpr
+import CubeSolver.Cube
+import CubeSolver.AlgExpr
 
 -- This is a totally legit speedcubing term, I promise
 sexy :: Algorithm

@@ -1,15 +1,15 @@
 {-# LANGUAGE OverloadedStrings #-}
-module PDFCube (generatePDF, generatePDFSolution) where
+module CubeSolver.PDFCube (generatePDF, generatePDFSolution) where
 
+import CubeSolver.CubeState
+import CubeSolver.Cube
+import CubeSolver.CubeParser (parseCubeState)
+import CubeSolver.CFOP.CFOP (cfop)
 import Graphics.PDF.Colors hiding (blue)
 import Graphics.PDF hiding (blue)
-import CubeState
-import Cube
 import Control.Monad.State
 import qualified Data.Text as T
 import Text.Megaparsec (runParser)
-import CubeParser (parseCubeState)
-import CFOP.CFOP (cfop)
 
 generatePDF :: IO ()
 generatePDF = do

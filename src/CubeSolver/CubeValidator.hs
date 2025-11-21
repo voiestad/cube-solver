@@ -1,6 +1,6 @@
-module CubeValidator (validateCubeState) where
+module CubeSolver.CubeValidator (validateCubeState) where
 
-import CubeState
+import CubeSolver.CubeState
 
 validateCubeState :: CubeState -> Bool
 validateCubeState cubeState = 

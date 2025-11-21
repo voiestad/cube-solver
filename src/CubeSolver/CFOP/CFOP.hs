@@ -1,17 +1,17 @@
-module CFOP.CFOP where
+module CubeSolver.CFOP.CFOP where
 
-import Cube
+import CubeSolver.Cube
     ( Algorithm
     , Cube
     , removeCancellingMoves
     , tryAlg
     , aufMoves, applyAlgorithm
     )
-import CubeState (cubeSolved)
-import CFOP.Cross (cross)
-import CFOP.PLL (pll)
-import CFOP.OLL (oll)
-import CFOP.F2L (f2l)
+import CubeSolver.CubeState (cubeSolved)
+import CubeSolver.CFOP.Cross (cross)
+import CubeSolver.CFOP.PLL (pll)
+import CubeSolver.CFOP.OLL (oll)
+import CubeSolver.CFOP.F2L (f2l)
 import Data.List (singleton)
 import Control.Monad.State
 
